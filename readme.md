@@ -11,7 +11,9 @@
 
 #How to use?
 
-> php smtp.php
+user@host $ git clone https://github.com/agussetyar/smtpchecker.git
+user@host $ cd smtpchecker
+user@host smtpchecker/ $ php smtp.php
 
 
 
