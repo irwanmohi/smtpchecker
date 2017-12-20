@@ -5,7 +5,26 @@ use \PHPMailer\PHPMailer\SMTP;
 use \PHPMailer\PHPMailer\Exception;
 
 Class SMTPCheck Extends SMTP {
+    /**
+    * Email & Password Delimiter
+    * email@domain.com|samplepassword
+    *
+    * @return string
+    */
+    const DELIMITER   = "|";
+
+    /**
+    * List Email & Password Folder
+    *
+    * @return string
+    */
     const PATH_LIST   = "list";
+
+    /**
+    * Result Folder
+    *
+    * @return string
+    */
     const PATH_RESULT = "result";
 
     /**
@@ -189,7 +208,7 @@ echo "+ Start checking list (".basename($empass).") and loaded ".count($open)." 
 foreach($open as $no => $list) {
     $remove[$no] = $list;
 
-    $explode = explode("|", $list);
+    $explode = explode($smtp::DELIMITER, $list);
     $host    = explode("@", $explode[0]);
     
     if(in_array($smtp->getHost($host[1]), $smtp->specialHost())) {
