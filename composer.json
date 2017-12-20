@@ -1,0 +1,14 @@
+{
+    "name": "agussetyar/smtpchecker",
+    "description": "SMTPChecker tools",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Agus Setya R",
+            "email": "agussetyar@indoxploit.or.id"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    },
+}
